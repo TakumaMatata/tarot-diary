@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :logs
-  validates :user_name, presence: true
+  # validates :user_name, presence: true #need to figure out devise sign up option
   validates :email, uniqueness: true, presence: true
   validates :password, presence: true, length: {in: 6..20}, on: :create
 
