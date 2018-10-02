@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  # root to: "home#index"
+  root to: "pages#home"
+  get 'pages/contact'
   resources :users, only: [:index, :show, :edit, :update]
   resources :logs
 
