@@ -1,0 +1,8 @@
+<%= simple_form_for [@user, @log] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :date %>
+  <%= f.input :spread_memo %>
+  <%= f.input :card_name %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
