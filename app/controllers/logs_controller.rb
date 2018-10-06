@@ -9,11 +9,13 @@ class LogsController < ApplicationController
   end
 
   def new
-    @log = Log.new
+    @user = User.find(params[:user_id])
+    @log = User.new
   end
 
   def create
     @log = Log.new(log_params)
+    @log.user = User.find(params[:log_id])
     if @log.save
       redirect_to user_logs_path
     else
