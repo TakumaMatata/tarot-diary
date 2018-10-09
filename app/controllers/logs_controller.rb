@@ -9,7 +9,7 @@ class LogsController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = User.find(@user)
     @log = User.new
   end
 
